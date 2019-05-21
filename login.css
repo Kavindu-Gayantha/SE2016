@@ -1,0 +1,14 @@
+.page-header
+{
+  color:gold;
+  background: rgb(30, 64, 105);
+  text-align: center;
+  height: auto;
+  vertical-align: top;
+
+}
+body
+{
+  padding: 0;
+  margin: 0;
+}
