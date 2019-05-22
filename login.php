@@ -16,7 +16,15 @@
   <div class='page-header'>
     <h1> WELCOME to SE 2016 database web</h1>
   </div>
-  <button type = "button" class = "btn btn-success" type="padding-left:5px; margin-top:0px;">Success Button</button>
+  <div id='login_button'>
+  <button type = "button" class = "btn btn-success">Log in</button>
+</div>
+  <div id='login_button'>
+  <button type = "button" class = "btn btn-success">Register</button>
+  </div>
+  <div id="section" style="backgound:url("background3.jpg");">
+
+  </div>
 
 
 </body>
