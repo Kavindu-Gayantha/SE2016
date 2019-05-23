@@ -25,6 +25,9 @@
   <div id="section" style="backgound:url("background3.jpg");">
 
   </div>
+  <?php
+    
+   ?>
 
 
 </body>
