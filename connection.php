@@ -4,6 +4,13 @@
   $user="root";
   $password="";
 
-  $conn = mysqli_connection("$server","$db","$user",""$password") or die("connection failed");
+  $conn = mysqli_connect("localhost","root","","$db");
+  if(mysqli_connect_errno())
+  {
+    die('databse connection failed '. mysqli_connect_error());
+  }
+  // else {
+  //   echo "success";
+  // }
 
  ?>
