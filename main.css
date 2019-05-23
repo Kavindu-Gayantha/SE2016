@@ -1,0 +1,64 @@
+body
+{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size:14px;
+  background: url('background1.jpeg') ;
+  background-repeat:no-repeat;
+  background-position: fixed;
+  background-size: cover;
+
+}
+.header_statement
+{
+  color:gold;
+  font-weight: bold;
+  text-align: center;
+  padding:15px;
+}
+.header
+{
+  background: rgb(32, 84, 156);
+  width:100%;
+  opacity: .7;
+}
+.login
+{
+  width:350px;
+  margin:100px auto ;
+  /* padding-right: 300px; */
+  font-size: 18px;
+
+}
+input
+{
+  display: block;
+  width:100%;
+  padding:5px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight:bold;
+}
+button
+{
+  width:100%;
+  padding:5px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+  font-weight: bold;
+
+}
+p.error
+{
+  background: red;
+  padding:10px;
+  color:white;
+
+}
+p
+{
+  font-weight: bold;
+
+}
