@@ -1,4 +1,64 @@
 <?php require_once('connection.php'); ?>
+<?php
+//check for form subbmition button eka click krlada baalanna
+if (isset($_POST['submit']))
+{
+  $errors = array(); // to save errors
+  //check if the username and password has been entered
+  if(!isset($_POST['email']) || strlen(trim($_POST['email'])) < 1)
+  {
+    // save errors in an array
+    $errors[] = 'Username is Missing / Invalid ';
+  }
+  if(!isset($_POST['password']) || strlen(trim($_POST['password'])) < 1) // trim userd to check if whitespaces are available , avoid keeping spaces in username or password
+  {
+    $errors[] = 'Password is Missing / Invalid ';
+  }
+}
+
+// check if there are any errors in the form
+if(empty ($errors))
+{
+  //save username and password into variables.
+  $email = mysqli_real_escape_string($conn,$_POST['email']);
+  $password = mysqli_real_escape_string($conn,$_POST['password']);
+  $hashed_password = shal($password);
+
+  //prepare database query
+  $query = "SELECT * FROM loginSE WHERE email = '{$email}' AND password = '{$hashed_password}' LIMIT 1";
+
+  $result_set = mysqli_query($conn, $query);
+
+  if($result_set)
+  {
+    //query successful
+    if(mysqli_num_rows($result_set) == 1)
+    {
+      // vlaid user found
+        // redirect to usre.php
+      header('Location: users.php');
+
+    }
+    else
+    {
+      // username and password invalid 
+      $error[]
+    }
+  }
+  else
+  {
+    $error[] = 'Database query failed';
+  }
+
+  // check if the user is Invalid
+
+  // if not , display the error
+}
+
+
+
+
+ ?>
 <!doctype html>
 <html lang="en">
 <head><title>log in</title>
