@@ -1,3 +1,8 @@
+*
+{
+  margin: 0;
+}
+
 body
 {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -60,5 +65,25 @@ p.error
 p
 {
   font-weight: bold;
+  margin-bottom:15px;
 
+}
+header
+{
+  background:#eee;
+  overflow:auto;
+  padding:5px;
+}
+header .appname
+{
+  float:left;
+
+}
+header .loggedin
+{
+  float:right;
+}
+.logout
+{
+  size:auto;
 }

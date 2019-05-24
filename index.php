@@ -1,3 +1,6 @@
+
+//if use session function we have to start session here.
+<?php  session_start();?>
 <?php require_once('connection.php'); ?>
 <?php
 //check for form subbmition button eka click krlada baalanna
@@ -41,8 +44,12 @@ if(empty($errors))
     if(mysqli_num_rows($result_set) == 1)
     {
       // vlaid user found
-        // redirect to usre.php
-      header('Location: users.php');
+        // re<button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</ button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button>direct to usre.php
+        $user = mysqli_fetch_assoc($result_set);
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['fitst_name'] = $user['first_name'];
+        
+            header('Location: users.php');
     }
     else
     {
