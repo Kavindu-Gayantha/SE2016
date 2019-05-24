@@ -14,7 +14,7 @@ if (isset($_POST['submit']))
   {
     $errors[] = 'Password is Missing / Invalid ';
   }
-}
+
 
 // check if there are any errors in the form
 if(empty ($errors))
@@ -48,16 +48,11 @@ if(empty ($errors))
   {
     $errors[] = 'Database query failed';
   }
-
-  // check if the user is Invalid
-
-  // if not , display the error
+}
 }
 
+?>
 
-
-
- ?>
 <!doctype html>
 <html lang="en">
 <head><title>log in</title>
@@ -75,9 +70,9 @@ if(empty ($errors))
 
        <!--<p class="error">Invalid Username / Password</p>-->
        <?php
-       if(isset($errors) && !empty($errors))
+       if( isset($errors) && !empty($errors))
        {
-         echo '<p class="error">Invalid Username / Password</p';
+         echo '<p class="error">Invalid Username / Password</p>';
        }
 
         ?>
@@ -91,10 +86,11 @@ if(empty ($errors))
           <label for="">Password</label><!-- password-->
           <input type="password" name="password" id="" placeholder="Password">
         </p>
-          <button type="submit" name="submit">Log in</button>
         <p>
-
+          <button type="submit" name="submit">Log in</button>
         </p>
+
+
       </fieldset>
     </form>
 
