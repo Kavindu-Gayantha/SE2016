@@ -4,6 +4,11 @@
 if (isset($_POST['submit']))
 {
   $errors = array(); // to save errors
+  // print_r($errors);
+  foreach($errors as $arritem)
+  {
+    echo "$arritem<br/>";
+  }
   //check if the username and password has been entered
   if(!isset($_POST['email']) || strlen(trim($_POST['email'])) < 1)
   {
@@ -17,15 +22,16 @@ if (isset($_POST['submit']))
 
 
 // check if there are any errors in the form
-if(empty ($errors))
+if(empty($errors))
 {
   //save username and password into variables.
   $email = mysqli_real_escape_string($conn,$_POST['email']);
   $password = mysqli_real_escape_string($conn,$_POST['password']);
-  $hashed_password = sha1($password);
+  // $hashed_password = sha1($password);
+  $password = $_POST['password'];
 
   //prepare database query
-  $query = "SELECT * FROM loginSE WHERE email = '{$email}' AND password = '{$hashed_password}' LIMIT 1";
+  $query = "SELECT * FROM loginSE WHERE email = '{$email}' AND password = '{$password}' LIMIT 1";
 
   $result_set = mysqli_query($conn, $query);
 
@@ -70,7 +76,7 @@ if(empty ($errors))
 
        <!--<p class="error">Invalid Username / Password</p>-->
        <?php
-       if( isset($errors) && !empty($errors))
+       if(isset($errors) && !empty($errors))
        {
          echo '<p class="error">Invalid Username / Password</p>';
        }
