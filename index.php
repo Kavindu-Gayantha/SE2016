@@ -22,7 +22,7 @@ if(empty ($errors))
   //save username and password into variables.
   $email = mysqli_real_escape_string($conn,$_POST['email']);
   $password = mysqli_real_escape_string($conn,$_POST['password']);
-  $hashed_password = shal($password);
+  $hashed_password = sha1($password);
 
   //prepare database query
   $query = "SELECT * FROM loginSE WHERE email = '{$email}' AND password = '{$hashed_password}' LIMIT 1";
@@ -37,17 +37,16 @@ if(empty ($errors))
       // vlaid user found
         // redirect to usre.php
       header('Location: users.php');
-
     }
     else
     {
-      // username and password invalid 
-      $error[]
+      // username and password invalid
+       $errors[] = 'Invalid Username / password';
     }
   }
   else
   {
-    $error[] = 'Database query failed';
+    $errors[] = 'Database query failed';
   }
 
   // check if the user is Invalid
@@ -75,6 +74,13 @@ if(empty ($errors))
         <legend><h1>Log In</h1></legend>
 
        <!--<p class="error">Invalid Username / Password</p>-->
+       <?php
+       if(isset($errors) && !empty($errors))
+       {
+         echo '<p class="error">Invalid Username / Password</p';
+       }
+
+        ?>
 
         <p>
           <label for="">Username:</label> <!--user name-->
