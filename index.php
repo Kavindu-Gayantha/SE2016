@@ -76,7 +76,7 @@ if(empty($errors))
 </head>
 <body>
   <div class="header">
-    <h1 class="header_statement">SOFTWARE ENGINEERING <br>university of Kelaniya</h1>
+    <h1 class="header_statement">SOFTWARE ENGINEERING <br>University of Kelaniya</h1>
   </div>
   <div class="login">
     <form action="index.php" method="post">
@@ -91,6 +91,13 @@ if(empty($errors))
        }
 
         ?>
+        <!-- show a massege that you have logeg out-->
+        <?php
+          if(isset($_GET['logout']))
+          {
+            echo '<p class="info">You have successfully logged out</p>';
+          }
+         ?>
 
         <p>
           <label for="">Username:</label> <!--user name-->
@@ -102,7 +109,7 @@ if(empty($errors))
           <input type="password" name="password" id="" placeholder="Password">
         </p>
         <p>
-          <button type="submit" name="submit">Log in</button>
+          <button type="submit" name="submit" id="loginbtn">Log in</button>
         </p>
 
 

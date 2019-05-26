@@ -15,16 +15,18 @@ body
 }
 .header_statement
 {
-  color:gold;
+  color:blue;
   font-weight: bold;
   text-align: center;
   padding:15px;
+  text-shadow: 2px 2px 1px #000;
 }
 .header
 {
-  background: rgb(32, 84, 156);
+  /* background: rgb(32, 84, 156); */
+  background:  #390226;
   width:100%;
-  opacity: .7;
+
 }
 .login
 {
@@ -68,29 +70,40 @@ p
   margin-bottom:15px;
 
 }
+p.info
+{
+  background: green;
+  padding:10px;
+  color:white;
+
+}
 header
 {
   /* background:#eee; */
-  background: lightblue;
+  background: #390226;
   overflow:auto;
   padding:5px;
-  height:80px;
-
+  height:85px;
 }
 header .appname
 {
   float:center;
   font-size: 28px;
   font-weight: bold;
-  color:gold;
-  text-shadow: 2px 2px 1px #001;
+  color:blue;
+  text-shadow: 2px 2px 1px #000;
   text-align:center;
   padding-top: 13px;
-
-
 }
 header .loggedin
 {
   float:right
+}
+#loginbtn:hover
+{
+  cursor:pointer;
+  background:#390226;
+  border-color: black;
+  color:white;
 
 }

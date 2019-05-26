@@ -17,7 +17,7 @@
 <body>
   <header>
     <div class="appname">SE management system</div>
-    <div class="loggedin">Welcome <?php echo $_SESSION['first_name']; ?> ! <a href="logout.php">logout</a></div>
+    <div class="loggedin" style="color:white; font-size:22px;">Welcome <?php echo $_SESSION['first_name']; ?> ! <a href="logout.php" style="color:gold; font-weight:bold; font-size:20px;">logout</a></div>
   </header>
 
 
