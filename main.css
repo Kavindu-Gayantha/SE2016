@@ -9,7 +9,7 @@ body
   font-size:14px;
   background: url('background1.jpeg') ;
   background-repeat:no-repeat;
-  background-position: fixed;
+  /* background-position: */
   background-size: cover;
 
 }
