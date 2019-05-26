@@ -1,6 +1,8 @@
 
+
+<?php  session_start();
 //if use session function we have to start session here.
-<?php  session_start();?>
+?>
 <?php require_once('connection.php'); ?>
 <?php
 //check for form subbmition button eka click krlada baalanna
@@ -32,7 +34,7 @@ if(empty($errors))
   $password = mysqli_real_escape_string($conn,$_POST['password']);
   // $hashed_password = sha1($password);
   $password = $_POST['password'];
-
+//if use session function we have //if use session f//if use session f//if use session function we have to start session here.unction we have to start session here.unction we have to start session here.to start session here.
   //prepare database query
   $query = "SELECT * FROM loginSE WHERE email = '{$email}' AND password = '{$password}' LIMIT 1";
 
@@ -47,8 +49,8 @@ if(empty($errors))
         // re<button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</ button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button><button class="logout">logout</button>direct to usre.php
         $user = mysqli_fetch_assoc($result_set);
         $_SESSION['user_id'] = $user['id'];
-        $_SESSION['fitst_name'] = $user['first_name'];
-        
+        $_SESSION['first_name'] = $user['first_name'];
+
             header('Location: users.php');
     }
     else

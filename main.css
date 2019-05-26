@@ -70,16 +70,27 @@ p
 }
 header
 {
-  background:#eee;
+  /* background:#eee; */
+  background: lightblue;
   overflow:auto;
   padding:5px;
+  height:80px;
+
 }
 header .appname
 {
-  float:left;
+  float:center;
+  font-size: 28px;
+  font-weight: bold;
+  color:gold;
+  text-shadow: 2px 2px 1px #001;
+  text-align:center;
+  padding-top: 13px;
+
 
 }
 header .loggedin
 {
-  float:right;
+  float:right
+
 }

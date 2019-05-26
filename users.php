@@ -1,5 +1,12 @@
 <?php session_start(); ?>
 <?php require_once('connection.php'); ?>
+<?php
+  // cheking if a user is logged in
+  if(!isset($_SESSION['user_id']))
+  {
+    header('Location: index.php');
+  }
+ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +17,7 @@
 <body>
   <header>
     <div class="appname">SE management system</div>
-    <div class="loggedin">Welcome<?php echo $_SESSION['email']; ?> ! <a href="logout.php">logout</a></div>
+    <div class="loggedin">Welcome <?php echo $_SESSION['first_name']; ?> ! <a href="logout.php">logout</a></div>
   </header>
 
 
