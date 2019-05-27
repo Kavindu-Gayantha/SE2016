@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>students</title>
+  <title><?php echo $_SESSION['username'];?></title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>

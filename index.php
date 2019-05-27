@@ -50,6 +50,7 @@ if(empty($errors))
         $user = mysqli_fetch_assoc($result_set);
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['first_name'] = $user['first_name'];
+        $_SESSION['username'] = $user['username']; // changed
 
             header('Location: users.php');
     }
@@ -117,7 +118,7 @@ if(empty($errors))
     </form>
 
   </div><!--login-->
-  
+
 
 
 </body>
