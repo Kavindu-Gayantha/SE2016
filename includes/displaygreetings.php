@@ -1,7 +1,7 @@
 <?php
   function display_greetings()
   {
-    $hour = date('12h'); // give the hour of current time
+    $hour = date('m/d/Y h:i:s a', time()); // give the hour of current time
 
     if($hour >=0 and $hour <=11)
     {
