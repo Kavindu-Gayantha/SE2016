@@ -74,6 +74,7 @@ if(empty($errors))
 <head><title>log in</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="main.css">
+  
 </head>
 <body>
   <div class="header">
@@ -110,7 +111,7 @@ if(empty($errors))
           <input type="password" name="password" id="" placeholder="Password">
         </p>
         <p>
-          <button type="submit" name="submit" id="loginbtn">Log in</button>
+          <button type="submit" name="submit" id="loginbtn" onclick="myfunction();">Log in</button>
         </p>
 
 
