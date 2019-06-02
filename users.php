@@ -52,8 +52,82 @@
     <div class="appname">SE management system</div>
     <div class="loggedin" style="color:white; font-size:22px;">welcome <?php echo $_SESSION['first_name']; ?>,  <a href="logout.php" style="color:gold; font-weight:bold; font-size:20px;">logout</a></div>
   </header>
+  <div class="container">
+  
+    <h1>SE 2016 batchmates</h1>
+  </div>
 
+    <?php
+    $query2 = "SELECT * FROM loginSE";
 
+    $result_set = mysqli_query($conn, $query2);
+
+    if($result_set)
+    {
+      echo mysqli_num_rows($result_set) . "Records found.";
+      
+      while($record = mysqli_fetch_assoc($result_set))
+      {
+        echo "<table><th> {'first_name'}" ."</td><td>".$records['first_name'] . "</td></tr></table>";
+      }
+    }
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+    
+    Notice: Undefined variable: records in /opt/lampp/htdocs/myphp/se site 2016 php mysql/SE2016/users.php on line 71
+    {'first_name'}	
+
+    ?>
 
 
 </body>
