@@ -1,3 +1,4 @@
+
 <?php session_start(); ?>
 <?php require_once('connection.php'); ?>
 <?php require_once('includes/displaygreetings.php'); ?>
@@ -52,29 +53,3 @@
     <div class="appname">SE management system</div>
     <div class="loggedin" style="color:white; font-size:22px;">welcome <?php echo $_SESSION['first_name']; ?>,  <a href="logout.php" style="color:gold; font-weight:bold; font-size:20px;">logout</a></div>
   </header>
-  <div class="container" style="align:center;">
-
-    <h1>SE 2016 batchmates</h1>
-
-
-    <?php
-    // $query2 = "SELECT * FROM loginSE";
-    //
-    // $result_set = mysqli_query($conn, $query2);
-    //
-    // if($result_set)
-    // {
-    //   echo mysqli_num_rows($result_set) . "Records found.";
-    //
-    //   while($record = mysqli_fetch_assoc($result_set))
-    //   {
-    //     echo "<table><th> {'first_name'}" ."</td><td>".$records['first_name'] . "</td></tr></table>";
-    //   }
-    // }
-
-
-    ?>
-  </div>
-
-</body>
-</html>
