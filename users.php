@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
 
-<title>hi!! i'm <?php  echo $_SESSION['first_name']; ?></title>
+<title><?php  echo $_SESSION['first_name']; ?></title>
    <!-- Required meta tags -->
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
