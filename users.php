@@ -7,6 +7,22 @@
   {
     header('Location: index.php');
   }
+  $user_list = '';
+  // getting the list of users
+  $query = " SELECT * FROM user WHERE is_deleted = 0 ORDER BY first_name";
+  $users = mysqli_query($conn, $query);
+
+  if($users)
+  {
+    while($user = mysqli_fetch_assoc($users))
+    {
+      $user_list .= "<tr>";  //stopped place .
+    }
+  }
+  else 
+  {
+    echo "database query failed ";
+  }
  ?>
 <!doctype html>
 <html lang="en">
@@ -74,10 +90,21 @@
     <tr><td>social :<?php ?></td></tr>
   </table>
 </div>
-<?php 
 
+<main> 
+  <h1>Users <span> <a href="add-user.php"> + add user </a></span></h1>
+  <table class="masterlist">
+  
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Last login</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
 
-?>
-
+    <?php echo $user_list; ?>
+  </table>
+</main>
 </body>
 </html>
