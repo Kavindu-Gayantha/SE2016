@@ -16,7 +16,12 @@
   {
     while($user = mysqli_fetch_assoc($users))
     {
-      $user_list .= "<tr>";  //stopped place .
+      $user_list .= "<tr>";  //stopped place ..
+      $user_list .= "<td> {$user['first_name']}</td>";
+      $user_list .= "<td>{$user['last_name']}</td>";
+      $user_list .= "<td>{$user['last_login']}</td>";
+      $user_list .= "<td>{$user['last_login']}</td>";
+      $user_list .= "</tr>";
     }
   }
   else 
