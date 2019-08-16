@@ -89,12 +89,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <div class="details">
-  <table id="infotable"width="60%" border="1px">
-    <tr><td rowspan="4" width="40%"><img src="4K-Green-Grass-Wallpaper.jpg" alt="" width="400px"></td><td>Name : <?php echo $_SESSION['first_name']; ?></td></tr>
-    <tr><td>Student number : <?php include_once('includes/displayQuery.php'); ?></td></tr>
-    <tr><td>contact : <?php ?></td></tr>
-    <tr><td>social :<?php ?></td></tr>
-  </table>
+
 </div>
 
 <main> 
