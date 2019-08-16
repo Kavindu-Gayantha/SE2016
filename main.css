@@ -155,6 +155,8 @@ main h1
 {
   margin-bottom : 20 auto;
   font-size: 50px;
+  color:rgb(45, 241, 10);
+  font-weight: bold;
 }
 
 main h1 span 
@@ -164,6 +166,7 @@ main h1 span
 table.masterlist
 {
   width: 100%;
+  border-collapse: collapse;
 }
 table.masterlist th
 {
@@ -173,3 +176,11 @@ table.masterlist th
   text-shadow: 1.5px 1.5px black;
   padding-left:5px;
 }
+table.masterlist td
+{
+  color:white;
+  font-size:15px;
+  background: rgba(195, 255, 0, 0.212);
+  padding-left:4px;
+}
+
