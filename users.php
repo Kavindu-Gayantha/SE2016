@@ -16,11 +16,12 @@
   {
     while($user = mysqli_fetch_assoc($users))
     {
-      $user_list .= "<tr>";  //stopped place ..
+      $user_list .= "<tr>"; 
       $user_list .= "<td> {$user['first_name']}</td>";
       $user_list .= "<td>{$user['last_name']}</td>";
       $user_list .= "<td>{$user['last_login']}</td>";
-      $user_list .= "<td>{$user['last_login']}</td>";
+      $user_list .= "<td> <a href=\"modify-user.php?user_id={$user['id']}\">Edit</a></td>";
+      $user_list .= "<td> <a href=\"delete-user.php?user_id={$user['id']}\">Delete</a></td>";
       $user_list .= "</tr>";
     }
   }
