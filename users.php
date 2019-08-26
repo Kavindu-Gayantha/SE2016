@@ -45,20 +45,7 @@
 
   <link rel="stylesheet" href="main.css">
   <script>
-//    function myFunction() {
-//         var time = prompt("Please enter current time in 24 hour clock", "8.00");
-//         if (time != null) {
-//           // document.getElementById("displayGreetings").innerHTML ="Hello " + person + "! How are you today?";
-//           if(time<=11.59 && time>00.00)
-//           {
-//             document.getElementById("displayGreetings").innerHTML = "Good Morning!";
-//           }
-//           else
-//           {
-//             document.getElementById("displayGreetings").innerHTML = "Good Afternoon!";
-//           }
-//         }
-// }
+
       window.alert("welcome to SE 2016 unofficial site");
       // window.alert("")
 
@@ -83,7 +70,7 @@
 
 </div>
 
-<!-- Optional JavaScript -->
+<!-- Optional JavaScri••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••pt -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
