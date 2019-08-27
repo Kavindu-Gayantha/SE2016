@@ -4,6 +4,7 @@
 //if use session function we have to start session here.
 ?>
 <?php require_once('connection.php'); ?>
+<?php require_once('includes/functions.php');?>
 <?php
 //check for form subbmition button eka click krlada baalanna
 if (isset($_POST['submit']))

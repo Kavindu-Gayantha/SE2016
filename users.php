@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php require_once('connection.php'); ?>
 <?php require_once('includes/displaygreetings.php'); ?>
+<?php require_once('includes/functions.php');?>
 <?php
   // cheking if a user is logged in
   if(!isset($_SESSION['user_id']))
@@ -12,8 +13,7 @@
   $query = " SELECT * FROM user WHERE is_deleted = 0 ORDER BY first_name";
   $users = mysqli_query($conn, $query);
 
-  if($users)
-  {
+    verify_function($user);
     while($user = mysqli_fetch_assoc($users))
     {
       $user_list .= "<tr>"; 
@@ -24,11 +24,7 @@
       $user_list .= "<td> <a href=\"delete-user.php?user_id={$user['id']}\">Delete</a></td>";
       $user_list .= "</tr>";
     }
-  }
-  else 
-  {
-    echo "database query failed ";
-  }
+
  ?>
 <!doctype html>
 <html lang="en">
